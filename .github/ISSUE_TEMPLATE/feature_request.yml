@@ -1,0 +1,55 @@
+name: Feature Request
+description: Suggest an improvement or new feature
+labels: ["feature-request"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area does this relate to?
+      options:
+        - Web app
+        - REST API
+        - Google Reader API
+        - Feed fetching / parsing
+        - Full-content extraction
+        - Search
+        - Keyboard shortcuts
+        - Themes / appearance
+        - OPML import/export
+        - Billing / account
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: What problem does this solve, or what workflow does it improve?
+      placeholder: "I find myself having to … when I want to …"
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How would you like this to work? Be as specific or as vague as you like.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you found a workaround, or is there another way this could be addressed?
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Mockups, screenshots, links to similar features in other products, etc.
+    validations:
+      required: false

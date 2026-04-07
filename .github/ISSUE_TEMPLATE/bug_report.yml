@@ -8,12 +8,8 @@ body:
       label: Where did you encounter this?
       options:
         - Gobbler web app
-        - Unread
-        - NetNewsWire
-        - Reeder
-        - FreshRSS
-        - Other Reader API client
-        - REST API (direct)
+        - Reader API client
+        - REST API client (direct)
         - Other
     validations:
       required: true

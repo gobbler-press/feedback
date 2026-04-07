@@ -35,17 +35,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: full_content
-    attributes:
-      label: Is full-content fetching enabled for this subscription?
-      options:
-        - "Yes"
-        - "No"
-        - Not sure
-    validations:
-      required: false
-
   - type: textarea
     id: additional
     attributes:

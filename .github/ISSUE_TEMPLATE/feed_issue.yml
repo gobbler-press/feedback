@@ -1,0 +1,55 @@
+name: Feed Issue
+description: A feed isn't working, parsing incorrectly, or missing content
+labels: ["feed-issue"]
+body:
+  - type: input
+    id: feed_url
+    attributes:
+      label: Feed or site URL
+      description: The RSS/Atom feed URL, or the website URL if you used autodiscovery.
+      placeholder: "https://example.com/feed.xml or https://example.com"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: What's wrong?
+      options:
+        - Feed won't subscribe (discovery fails)
+        - Feed subscribed but no entries appear
+        - Entries appear but content is missing or truncated
+        - Full-content extraction returns wrong content
+        - Feed title, author, or metadata is wrong
+        - Entries have wrong dates or ordering
+        - Feed stopped updating (was working before)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What are you seeing vs. what you expected?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: full_content
+    attributes:
+      label: Is full-content fetching enabled for this subscription?
+      options:
+        - "Yes"
+        - "No"
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Screenshots, comparison with another reader, the raw feed URL if different from above, etc.
+    validations:
+      required: false
